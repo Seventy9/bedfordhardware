@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-img {
+img:not(.gallery-carousel-cell-image) {
   display: block;
   width: 100%;
 }
@@ -115,11 +115,11 @@ ul {
 }
 
 .header-title {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .header-image {
-  margin: 0 auto 4rem;
+  margin: 0 auto 1rem;
   width: 40rem;
 }
 
@@ -324,6 +324,8 @@ ul {
   text-align: justify;
 }
 
+
+
 /* Products */
 
 .products {
@@ -399,14 +401,130 @@ ul {
 
 
 
-/* Bedford Hardware */
 
-.content {
+/* Newsletters */
+
+.newsletters {
   background-color: var(--color-light);
   color: var(--color-dark);
-  height: 50vh;
-  padding-top: 3rem;
 }
 
-/* Brydens Housewares */
+.newsletters-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 50rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.newsletters-content {
+  padding: 5rem 0;
+  max-width: 50rem;
+}
+
+.newsletters-content-title {
+  margin-bottom: 1rem;
+}
+
+.newsletters-content-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.newsletters-content-image {
+  height: 100%;
+  margin: 0 auto;
+  width: 200px;
+}
+
+
+
+/* Gallery */
+
+.gallery {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.gallery-container {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 5rem 0;
+}
+
+.gallery-title {
+  margin-bottom: 2rem;
+}
+
+.gallery-carousel {
+  background: var(--color-dark);
+}
+
+.gallery-carousel.is-fullscreen {
+  z-index: 100;
+}
+
+.gallery-carousel-cell {
+  align-items: center;
+  display: flex;
+  height: 30rem;
+  justify-content: center;
+  margin-right: 2rem;
+  width: 100%;
+}
+
+.gallery-carousel.is-fullscreen .gallery-carousel-cell {
+  height: 100%;
+}
+
+.gallery-carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
+.gallery-carousel.is-fullscreen .gallery-carousel-cell-image {
+  max-width: 100%;
+}
+
+.flickity-button {
+  background: var(--color-light);
+}
+.flickity-button:hover {
+  background: var(--color-highlight);
+}
+
+.flickity-button-icon {
+  fill: var(--color-dark);
+}
+
+.flickity-button:disabled {
+  display: none;
+}
+
+.flickity-page-dots {
+  bottom: -2rem;
+}
+
+.flickity-page-dots .dot {
+  background: var(--color-light);
+  /* border-radius: 100;
+  height: 0.5rem;
+  margin: 0 0.5rem 0;
+  width: 2rem; */
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: var(--color-highlight);
+  opacity: 100;
+}
+
+.flickity-enabled.is-fullscreen .flickity-page-dots .dot {
+  background: var(--color-light);
+}
+
+.flickity-enabled.is-fullscreen .flickity-page-dots .dot.dot.is-selected {
+  background: var(--color-highlight);
+}
 
